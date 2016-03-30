@@ -6,6 +6,7 @@
 
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.8.40" :scope "provided"]
+                 [devcards "0.2.1"]
                  [ring "1.4.0"]
                  [ring/ring-defaults "0.2.0"]
                  [bk/ring-gzip "0.1.1"]
@@ -47,6 +48,14 @@
                            :asset-path "js/compiled/out"
                            :output-to "resources/public/js/compiled/testing.js"
                            :output-dir "resources/public/js/compiled/out"
+                           :source-map-timestamp true}}
+               :devcards
+               {:source-paths ["src/cljs"]
+                :figwheel {:devcards true}
+                :compiler {:main testing.core
+                           :asset-path "js/compiled/devcards_out"
+                           :output-to "resources/public/js/compiled/testing_devcards.js"
+                           :output-dir "resources/public/js/compiled/devcards_out"
                            :source-map-timestamp true}}}}
 
   ;; When running figwheel from nREPL, figwheel will read this configuration

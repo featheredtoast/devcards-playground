@@ -1,5 +1,12 @@
 # testing
 
+This is me faffing about in devcards. Devcards are COOL!
+
+After getting set up in the figwheel repl, (switch-to-build :devcards) will start running that build.
+
+Devcards are available at /cards.html
+
+Currently, devcards cannot be build/run if the main reagent/render is in place....
 
 ## Development
 
